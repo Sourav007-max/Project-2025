@@ -14,3 +14,11 @@ for(var i = 0; i <= 3; i++) {
 for(var i = 0; i <= arr1.length - 1; i++) {
     console.log(`Element at index ${i}`,arr1[i]);
 }
+
+// Array can store homogeneous as well as heterogeneous Type of Data
+
+var arr2 = [10, 50.55, true, 'Next',{name: 'Sourav', age : 22}, ()=>{console.log('Function')}, [200, 300]]
+console.log('The length of arr2 array:',arr2.length);
+for(var i = 0; i <= arr2.length - 1; i++) {
+    console.log(`Element at index ${i}`,arr2[i]);
+}
