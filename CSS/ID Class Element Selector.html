@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    
+    <title>ID Class Element Selector</title>
+    <style>
+        /* The * selctor is universal selector it will appicable to all*/
+        * {
+            background-color: lightblue;
+        }
+        /* Element selector for Tag name */
+        p {
+            font-weight: bold;
+            background-color: aqua;
+        }
+        /* ID selector(#): it should be unique to selctor.*/
+        para2 {
+            font-weight: italic;
+            background-color: black;
+        }
+        /* Class selector(.): Class name can be given to multiple element.*/
+        .container_style {
+            color: white;
+            background-color: black;
+            padding: 10px;
+            border-radius: 12px;
+        }
+
+        .center_alignment {
+            text-align: center;
+        }
+        /* Group selector: its set of all selector*/
+        h2, h3, h4 {
+            color: brown;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="container_style center_alignment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, magnam!</p>
+
+    <P id="para2" class="center_alignment" >Lorem ipsum dolor sit amet.</P>
+
+    <p class="container_style center_alignment">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+
+    <h2>Lorem, ipsum dolor.</h2>
+    <h3>Lorem ipsum dolor sit.</h3>
+    <h4>Lorem ipsum dolor sit amet.</h4>
+</body>
+</html>

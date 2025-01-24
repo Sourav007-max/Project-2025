@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <title>Animations</title>
+    <style>
+
+        .container {
+            border: 2px solid black;
+            height: 200px; width: 200px;
+            animation-name: clrchange;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes clrchange {
+            from {
+                background-color: darkgreen;
+            }
+            to {
+                background-color: orange;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="container"></p>
+</body>
+</html>
