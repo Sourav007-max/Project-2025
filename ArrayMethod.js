@@ -53,3 +53,32 @@ console.log('After splice',arr5);// After splice:  [10, 100, 200, 300, 40,  50, 
 
 var arr6 = [100, 200, 300, 400]
 console.log(arr6.slice(1,3));// [ 200, 300 ]
+
+// Array Methods using concat():
+let num1 = [10, 20, 30]
+let num2 = [40, 50]
+let newarr = num1.concat(num2);
+console.log(newarr);
+
+//Array Method using join():
+
+var names = ['a', 'p', 'p', 'l', 'e']
+let fruit_name = names.join("_");
+console.log(fruit_name);
+
+//Array method using array unpacking 
+
+let user = ['Sachin', 'Sourav', 'Kavya', 'Hemanth']
+let [user1, user2] = user;
+console.log(user1);
+console.log(user2);
+
+// Array method using sort():
+let arr7 = ['a', 'b', 'c']
+arr7.sort()
+console.log('After sort arr7 is', arr7);
+
+// Array method using reverse():
+
+arr7.reverse()
+console.log('After reverse arr7 is', arr7);
