@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Lexical Scope</title>
+</head>
+<body>
+    <script>
+        var global = 300;
+        console.log("value of global is:",global);// 300
+       // console.log("Vaule of Outer is:",outer);// error
+        //console.log("value of inner is:",inner);// error
+        function Outer() {
+            var outer = 400;
+            console.log("Vaule of Outer is:",outer);// 400
+            console.log("value of global is:",global); // 300
+            //console.log("value of inner is:",inner_variable); // error
+            function inner() {
+                var inner_variable = 200;
+                console.log("value of inner is:",inner_variable); // 200
+                console.log("Vaule of Outer is:",outer); // 400
+                console.log("value of global is:",global); // 300   
+            }
+            inner();
+        }
+        Outer();
+    </script>
+</body>
+</html>
+/*Lexical Scope: Child scope is having the access of its parent scope properties because in every scope we will be having one reference which will be pointing towards parent scope.*/
