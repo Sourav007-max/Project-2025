@@ -24,3 +24,27 @@ emp3.work();
 // 4. this keyword always holds address of current object.
 // 5. The reference variable present inside stack segment.
 // 6. The variable which holds address of the object such variable is called reference variable.
+
+class Student{
+    constructor(s_name, s_age, s_marks) {
+        this.s_name = s_name;
+        this.s_age = s_age;
+        this.s_marks = s_marks;
+    }
+
+    learn() {
+        console.log(this.s_name,'is learning');
+    }
+
+    work() {
+        console.log(this.s_name,'is working');
+    }
+}
+
+s1 = new Student('Ankit', 26, 300);
+console.log(s1);
+s1.work();
+s2 = new Student('Akash', 28, 400);
+console.log(s2);
+s2.work();
+s2.learn();
