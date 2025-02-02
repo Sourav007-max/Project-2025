@@ -1,0 +1,43 @@
+<script>
+    var add = (...args) => {
+        if (args.length === 0) {
+            console.log("Invalid numbers");
+        } else {
+            var res = args.reduce((alc, ele)=> alc+ele,0);
+            console.log("The addition of numbers:",res);
+        }
+    }
+add();
+add(10, 20);
+add(10, 20, 30)
+add(10);
+</script>
+
+
+
+<script>
+    var arr = [10,20,30]
+    var sum = arr.reduce(function(alc,ele) {
+        acc = alc+ele;
+        return acc;
+        },0)
+        console.log("Sum is:",sum);
+        
+</script>
+
+<script>
+    arr = [10,20,30];
+    arr.push(50);
+    console.log(arr);
+
+    arr2 = [10,20,30];
+    arr2.unshift(10);
+    console.log(arr2);
+
+    arr2.shift();
+    console.log(arr2);
+
+    arr2.pop();
+    console.log(arr2);
+
+</script>
