@@ -15,28 +15,28 @@ for (var i = 0; i <= arr1.length -1; i++) {
 
 // Array Method using push ()
 var arr2 = [10, 20, 30, 40]
-console.log('Before push',arr2);
+console.log('Before push',arr2); // Before push [ 10, 20, 30, 40 ]
 arr2.push(50);//Append element at the end of array
-console.log('After push', arr2);
+console.log('After push', arr2); // After push [ 10, 20, 30, 40, 50 ]
 
 // Array Mwthod using unshift() 
 arr2.unshift(6);// Append element at begining of array
-console.log('After unshift',arr2);
+console.log('After unshift',arr2); // After unshift [ 6, 10, 20, 30, 40, 50 ]
 
 // Array Method using shift()
 
 arr2.shift();// it will help to remove element at begining of array
-console.log('After shift',arr2);
+console.log('After shift',arr2);// After shift [ 10, 20, 30, 40, 50 ]
 
 // Array Method using pop()
 
 arr2.pop();// It will help to remove element at end of array
-console.log('After pop',arr2);
+console.log('After pop',arr2); // After pop [ 10, 20, 30, 40 ]
 
 // Array method using include()
 
 let arr3 = ['apple', 'banana', 'orange']
-console.log(arr3.includes('banana')); // It checks if an array contains specific element
+console.log(arr3.includes('banana')); // It checks if an array contains specific element // true
 
 // Array method indexof()
 
