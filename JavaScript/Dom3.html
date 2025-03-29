@@ -3,7 +3,7 @@
 <head>
     <title>Website</title>
     <style>
-        body {
+        /* body {
     background-color: lightblue;
     color: blue;
     border: 2px;
@@ -13,18 +13,38 @@ body.dark-mode {
     background-color: black;
     color: red;
     border: 2px;
-}
+} */
     </style>
 </head>
 <body>
-    <h1 class ="header">Welcome to our Website</h1>
-    <button id="mode" class="btn">Dark mode</button>
+    <div id = "theme" style="padding: 20px;">
+    <h1 id = "header">Welcome to our Website</h1>
+    <button id = "mode" class="btn">Dark mode</button>
     <script>
-        var target_ele = document.getElementById('mode').addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-            var isDarkMode = document.body.classList.contains('dark-mode');
-            this.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
-        })  
+        // var target_ele = document.getElementById('mode').addEventListener('click', function() {
+        //     document.body.classList.toggle('dark-mode');
+        //     var isDarkMode = document.body.classList.contains('dark-mode');
+        //     this.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+        // })  
+
+        var themeContainer = document.getElementById('theme');
+        var heading = document.getElementById('header');
+        var themeToggleButton = document.getElementById('mode');
+
+        themeToggleButton.addEventListener('click', () => {
+            if (themeContainer.style.backgroundColor === 'black') {
+                // Switch to Light Theme
+                themeContainer.style.backgroundColor = 'white';
+                heading.style.color = 'black';
+                themeToggleButton.textContent = 'Dark mode';
+            } else {
+                // Switch to Dark Theme
+                themeContainer.style.backgroundColor = 'black';
+                heading.style.color = 'white';
+                themeToggleButton.textContent = 'Light mode';
+            }
+        });
     </script>
+    </div>
 </body>
 </html>
