@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            color: black;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h3>Click Button here!</h3>
+    <button id="myButton">Click</button>
+    <script>
+        // this is for when we click the button alert page will come
+        // Single click
+        document.querySelector('#myButton').addEventListener('click', () => {
+            alert('Button Clicked')
+        })
+        // for double Click
+        document.querySelector('#myButton').addEventListener('dblclick', () => {
+            alert("Button Clicked Double Times")
+        })
+        // mouseOver
+        document.querySelector('#myButton').addEventListener('mouseover', () => {
+            alert('Mouse over the element!')
+        })
+        // mouseout
+        document.querySelector('#myButton').addEventListener('mouseout', () => {
+            alert('Mouse left the element!')
+        })
+    </script>
+    
+</body> 
+</html>

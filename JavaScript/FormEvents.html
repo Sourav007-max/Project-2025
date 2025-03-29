@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h3>My Form</h3>
+
+    <form id="myForm">
+        <label>Enter name: </label>
+        <input type="text">
+        <br>
+        <input type="submit" value="SUBMIT">
+    </form>
+    <script>
+        // submit method
+        document.querySelector('#myForm').addEventListener('submit', () => {
+            event.preventDefault(); // Prevent page refresh
+            alert('Form Submitted')
+        })
+
+        // change
+        document.querySelector('#myForm').addEventListener('change', () => {
+            alert(`Input Changed to: ${event.target.value}`)
+        })  
+        
+        // focus
+        document.querySelector('#myForm').addEventListener('focus', () => {
+            alert('Input feild focused!')
+        })    
+
+
+    </script>
+</body>
+</html>

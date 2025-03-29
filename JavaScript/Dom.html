@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>document.getElementByID()</title>
+    <!-- Its the Css code to add colour -->
+    <style>
+        .addBackground {
+            color: white; background-color: black;
+            padding: 15px;width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p id = "para">Hello</p>
+    <!-- Button tag with onClick its calling the function inside the script tag -->
+    <button onClick="changeClr()">Click</button>
+    <script>
+        var toggle = false;
+        function changeClr() {
+            // var variable is used if we use const we will get the error
+            // document.getElementById('para') this method calling the p tag and its properties
+            var target_ele = document.getElementById('para');
+            if(!toggle) {
+                target_ele.classList.add("addBackground");
+                toggle = true;
+            } else {
+                target_ele.classList.remove("addBackground");
+                toggle = false;
+            }
+            
+        }
+        console.log(target_ele);
+    </script>
+</body>
+</html>
+<!-- document.getElementById() this method call the id in the p tag -->
