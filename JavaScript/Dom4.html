@@ -2,14 +2,16 @@
 <html>
 <head>
     <title>Document</title>
-    <h1></h1>
+    <h1 id= "head">Welcome to Dynamic World!</h1>
 </head>
 <body>
     <button id="main">Click</button>
     <script>
-        var heading = document.querySelector('h1');
-        heading.textContent = ('Welcome to Dynamic World!');
-        console.log(heading);
+        var heading = document.getElementById('head');
+        var button = document.getElementById('main');
+        button.addEventListener('click', () => {
+            heading.textContent = ('Explore my world!');
+        });
     </script>
 </body>
 </html>
