@@ -1,0 +1,49 @@
+<!-- 
+Higher Order: The function which accept another function as a argument such function are called Higher Order.
+
+Callback : The function which are passed as an arguments to another functions, such is called as Callback.
+    
+-->
+
+<script>
+    function greet(name) { // callback
+        console.log('Hello', name);
+    }
+
+    function greetProcess(Callback) { // It is higher order
+        console.log('The value of Callback parameter', Callback());
+    }
+    greetProcess(greet);
+
+    function greetProcess(callback) { // higher order function
+        callback('Sourav')
+    }
+
+    greetProcess((name) => { // callback function
+        console.log('hello', name);
+    })
+
+    //Built-in Higher order function:
+
+    var arr = [10, 23, 35, 50, 65, 70]
+    var even = arr.filter((ele)=> ele % 2 ===0)
+    console.log('The even numbers are', even)
+
+    var square = arr.map((ele) => ele * ele)
+    console.log('The square of the numbers', square)
+
+
+    var cart = [100, 200, 300, 400]
+
+    // Discount is 10% for each items
+    var discountPrice = cart.map((ele) => ele * 0.9)
+    console.log('The Discount price for each item', discountPrice)
+
+    // item less than 350
+    var lessThan = cart.filter((ele) => ele < 350)
+    console.log('The item is less than 350', lessThan)
+
+    // sum of all item
+    var sumElement = cart.reduce((ele, sum) => ele + sum, 0)
+    console.log('The sum of all items', sumElement)
+</script>
