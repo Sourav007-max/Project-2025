@@ -1,0 +1,60 @@
+<!-- 
+Closure : A closure in javaScript is a function that 'remebers' the variable from its outer scope even after the outer function has finshed Execution.
+-->
+
+<script>
+
+    function outerFunction() {
+        let count = 0;
+        return function() {
+            count++;
+            console.log(count);
+        }
+    }
+    res = outerFunction();
+    console.log(res);
+    for(var i = 0; i < 5; i++) {
+        res()
+    }
+
+    function outerFunction() {
+        let count = 0;
+        return {
+            increase : function() {
+                console.log(++count);
+            },
+            decrease : function() {
+                console.log(--count);
+            },
+            reset : function() {
+                count = 0;
+                console.log(count);
+            }
+        }
+    }
+    counter = outerFunction();
+    counter.increase(); // 1
+    counter.decrease(); // 0
+    counter.reset() // 0
+
+    function createBankAccount(initialBalance) {
+        let balance = initialBalance;
+        return {
+            deposit : function(amount) {
+                balance += amount;
+                console.log(`Deposited: ${amount}, Balance: ${balance}`);
+            },
+            withdraw : function(amount) {
+                if(amount > balance) {
+                    console.log('Insufficent Balance!');
+                } else {
+                    balance -= amount;
+                    console.log(`Withdraw: ${amount}, Balance: ${balance}`)
+                }
+            }
+        }
+    }
+    const myAccount = createBankAccount(1000);
+    myAccount.deposit(500);
+    myAccount.withdraw(100);
+</script>
