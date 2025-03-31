@@ -1,0 +1,81 @@
+<!-- 
+CallBack Hell : It is method  
+-->
+<script>
+    function placeOrder(item, callback) {
+        setTimeout(() => {
+            console.log('Order Placed for', item);
+            callback()
+        },3000)
+    }
+
+    function makePayment(amount, callback) {
+        setTimeout(() => {
+            console.log('Payment Received:', amount); 
+            callback()
+        },4000) 
+    }
+
+    function confirmOrder(callback) {
+        setTimeout(() =>{
+            console.log('Order Confirmed...!!'); 
+            callback()
+        },1000)
+    }
+
+    function sendEmail() {
+        setTimeout(() => {
+            console.log('Successfully Order Placed Email is send to Customer.'); 
+        },1000)
+    }
+
+    // All Tasks are Asynchronous Task.
+    // This are nested callback or callback hell
+    placeOrder('Pants', () =>{
+        makePayment(2500, () => {
+            confirmOrder(() => {
+                sendEmail()
+            })
+        })
+    })
+    
+
+    // Some Other task will not depend upon: placeOrder, makePayment, confirmOrder and sendEmail
+    console.log('Task Next 1') 
+</script>
+<script>
+    function searchMovie(name, callback) {
+        setTimeout(() => {
+            console.log('The movie name is:', name);
+            callback()
+        },4000)
+    }
+
+    function makePayment(amount, callback) {
+        setTimeout(() => {
+            console.log('Movie ticket Price:', amount);
+            callback();
+        },3000)
+    }
+
+    function confirmTicket(message, callback) {
+        setTimeout(() => {
+            console.log('Confirm Ticket:', message);
+            callback();
+        },1000)
+    }
+
+    function locationAt() {
+        setTimeout(()=> {
+            console.log('Movie Therater in Bengaluru');
+        })
+    }
+
+    searchMovie('John Wick', ()=> {
+        makePayment('250', () => {
+            confirmTicket('Payment done', () => {
+                locationAt()
+            })
+        })
+    })
+</script>
