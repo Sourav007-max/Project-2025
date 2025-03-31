@@ -1,0 +1,21 @@
+<script>
+    let myPromise = new Promise((resolve, reject) => {
+        let success = true;
+        if(success) {
+            resolve('First step complete.');
+        } else {
+            reject('Something went wrong.');
+        }
+    });
+    myPromise
+    .then(function (result) {
+        console.log(result);
+        return "Next step complete."; // Return a new Promise
+    })
+    .then(function (nextResult) {
+        console.log(nextResult); // Output: "Next step complete"
+    })
+    .catch(function(error) {
+        console.log(error); // Handles any error in the chain.
+    });
+</script>
