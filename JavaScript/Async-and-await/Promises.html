@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Promises: 
+        They are three type of Promises
+        1. Pending :
+        2. Resolved : then()
+        3. Rejected : catch()
+        */
+
+        let p1 = new Promise((resolve, reject) => {
+            setTimeout(()=> {
+                console.log('Logic to fetch the data')
+                resolve('Sourav: 1234')
+            }, 5000)
+        });
+
+        p1.then((data) => {
+            console.log('Process the received data:', data);
+            // then() will be called when promise is resolved.
+        })
+
+        let p2 = new Promise((resolve, reject) => {
+            setTimeout(()=> {
+                console.log('Process of recieved amount');
+                reject();
+            },3000)
+        })
+
+        p2.then((amount)=> {
+            console.log('The amount is recived:', amount);
+        }).catch(()=> {
+            console.log('Error occured when the fetching the data.')
+            // catch() will be called when promise is rejected.
+        })
+    </script>
+</body>
+</html>
