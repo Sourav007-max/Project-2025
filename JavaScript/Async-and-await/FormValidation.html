@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Validation</title>
+    <style>
+        #msg {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="return validation(event)">
+        <label>First Name:</label>
+        <input id="input_ele" type="text">
+        <span id="msg">*</span>
+        <br><br>
+        <button>Submit</button>
+    </form>
+    <script>
+            function validation() {
+                event.preventDefault();
+                var name = document.getElementById('input_ele').value
+                if(name === '') {
+                    target = document.getElementById('msg');
+                    target.textContent = "First name should not be empty...!!"
+                } else if (name.length< 2) {
+                    target = document.getElementById('msg');
+                    target.textContent = "Minimun length should be 2!"
+                }
+            }
+    </script>
+    
+</body>
+</html>

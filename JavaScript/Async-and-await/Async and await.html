@@ -1,0 +1,20 @@
+<script>
+    let p1 = new Promise ((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Execute Task 2');
+            resolve();
+        },5000)
+    })
+
+    async function process() {
+        console.log('Execute Task 1');
+        await p1;
+        console.log('Task 3 is depends on Task 2 to Execute');
+    }
+    process()
+    console.log('Some other Tasks');
+</script>
+<!--
+1. All the instruction which are present inside the function after promise they should wait for promise to resolve or reject
+2. But the instructions which are outside the functions should not wait for promise to resolve or reject. 
+-->
